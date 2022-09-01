@@ -1,0 +1,57 @@
+<div class="mobile-cards_wrapper">
+    <div class="demo__content">
+        <div class="demo__card-cont">
+            <div class="demo__card">
+                <div class="demo__card__top card-4" onclick="window.open('https://www.google.com/','mywindow');">
+                    <img src="./img/portfolio4.jpg" />
+                </div>
+                <div class="demo__card__drag"></div>
+            </div>
+            <div class="demo__card">
+                <div class="demo__card__top card-3" onclick="window.open('https://www.google.com/','mywindow');">
+                    <img src="./img/portfolio3.jpg" />
+                </div>
+                <div class="demo__card__drag"></div>
+            </div>
+            <div class="demo__card">
+                <div class="demo__card__top card-2" onclick="window.open('https://www.google.com/','mywindow');">
+                    <img src="./img/portfolio2.jpg" />
+                </div>
+                <div class="demo__card__drag"></div>
+            </div>
+            <div class="demo__card">
+                <div class="demo__card__top card-1" onclick="window.open('https://www.google.com/','mywindow');">
+                    <img src="./img/portfolio1.jpg" />
+                </div>
+                <div class="demo__card__drag"></div>
+            </div>
+        </div>
+        <div class="close">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.slim.min.js"></script>
+<script>
+    jQuery(init);
+
+    function init() {
+        jQuery("#block-block-44, #block-block-57", window.parent.document).append(jQuery("div.mobile-cards_wrapper"));
+    };
+    // use this to append ad .css to TEM.com page <head>
+    jQuery("head", window.parent.document).append(
+        "<link href='//fonts.googleapis.com/icon?family=Material+Icons' type='text/css' rel='stylesheet' />",
+        "<style>.close_txt,.open_txt{top:-5px;right:5px;}</style>",
+        "<link href='./style.css' type='text/css' rel='stylesheet' />");
+
+    // use this to append ad .js to TEM.com page <head>
+    [
+        './swipe-cards.js'
+    ].forEach(function (src) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.async = false;
+        window.parent.document.head.appendChild(script);
+    });
+</script>
